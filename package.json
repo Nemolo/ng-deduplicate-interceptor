@@ -1,6 +1,6 @@
 {
   "name": "ng-deduplicate-interceptor",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "peerDependencies": {
     "@angular/common": "^7.2.0",
     "@angular/core": "^7.2.0"
@@ -14,5 +14,9 @@
   },
   "repository": "https://github.com/Nemolo/ng-deduplicate-interceptor",
   "homepage": "https://github.com/Nemolo/ng-deduplicate-interceptor",
+  "keywords": [
+    "angular",
+    "interceptor"
+  ],
   "dependencies": {}
 }
