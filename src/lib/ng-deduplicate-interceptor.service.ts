@@ -18,6 +18,7 @@ export class NgDeduplicateInterceptorService implements HttpInterceptor {
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     switch (request.method) {
       case 'OPTIONS':
+      case 'HEAD':
       case 'GET': {
         // const key = `${request.method} ${request.urlWithParams}`;
         // const key = MD5(request);
