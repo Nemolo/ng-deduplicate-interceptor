@@ -6,7 +6,7 @@ This interceptor will catch all simultaneous `HEAD`, `OPTIONS` and `GET` and red
 
 ## Disclaimer
 
-This library was made for my onw usage, ad is provided AS IS, use it at your risk.
+This library was made for my own usage, and is provided AS IS, use it at your risk.
 
 ## Usage
 
