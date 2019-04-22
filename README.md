@@ -1,24 +1,30 @@
 # NgDeduplicateInterceptor
 
+## Scope
+
+This interceptor will catch all simultaneous `HEAD`, `OPTIONS` and `GET` and reduce those to a single call with `share()`.
+
+## Disclaimer
+
+This library was made for my onw usage, ad is provided AS IS, use it at your risk.
+
+## Usage
+
+Install via `npm i --save ng-deduplicate-interceptor`
+
+then add interceptor to providers, es:
+
+    import { NgDeduplicateInterceptorService } from 'ng-deduplicate-interceptor';
+
+    providers: [
+      ...
+      {
+        provide: HTTP_INTERCEPTORS,
+        useClass: NgDeduplicateInterceptorService,
+        multi: true
+      }
+    ]
+
+## Credits
+
 This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.0.
-
-## Code scaffolding
-
-Run `ng generate component component-name --project ng-deduplicate-interceptor` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ng-deduplicate-interceptor`.
-> Note: Don't forget to add `--project ng-deduplicate-interceptor` or else it will be added to the default project in your `angular.json` file. 
-
-## Build
-
-Run `ng build ng-deduplicate-interceptor` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Publishing
-
-After building your library with `ng build ng-deduplicate-interceptor`, go to the dist folder `cd dist/ng-deduplicate-interceptor` and run `npm publish`.
-
-## Running unit tests
-
-Run `ng test ng-deduplicate-interceptor` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

@@ -25,7 +25,7 @@ export class NgDeduplicateInterceptorService implements HttpInterceptor {
         if (!this.cache[key]) {
           this.cache[key] = next.handle(request).pipe(
             tap(() => {
-              setTimeout(() => delete this.cache[key]);
+              setTimeout(() => delete this.cache[key], 100);
             }),
             share()
           );
